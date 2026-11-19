@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'view/authentication/login_screen.dart';
+import 'view/technicians/technician_list_screen.dart'; // Add this import
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Fixio',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const LoginScreen(),
-      debugShowCheckedModeBanner: false,
+      home: const TechnicianListScreen(), // Update this line!
     );
   }
 }
