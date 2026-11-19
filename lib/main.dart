@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'view/authentication/login_screen.dart';
+import 'view/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Fixio',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF0066FF)),
         useMaterial3: true,
+        scaffoldBackgroundColor: Colors.white,
       ),
-      home: const LoginScreen(),
+      home: const WelcomeScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
