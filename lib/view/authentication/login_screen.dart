@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../viewmodel/auth_viewmodel.dart';
 import '../dashboard/dashboard_screen.dart';
+import 'register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -92,10 +93,9 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   void _handleRegister() {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Registration flow triggered.'),
-      ),
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const RegisterScreen()),
     );
   }
 

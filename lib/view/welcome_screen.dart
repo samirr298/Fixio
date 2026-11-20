@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'authentication/login_screen.dart';
+import 'authentication/register_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -14,7 +15,7 @@ class WelcomeScreen extends StatelessWidget {
   void _navigateToGetStarted(BuildContext context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const LoginScreen()),
+      MaterialPageRoute(builder: (context) => const RegisterScreen()),
     );
   }
 
