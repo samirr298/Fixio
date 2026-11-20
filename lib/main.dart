@@ -1,3 +1,4 @@
+import 'package:fixio/view/categories/service_categories.dart';
 import 'package:fixio/view/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'view/authentication/login_screen.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const ProfileScreen(),
+      home: const CategoriesScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
