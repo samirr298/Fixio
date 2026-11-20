@@ -1,3 +1,4 @@
+import 'package:fixio/view/price_estimate/price_estimate_screen.dart';
 import 'package:flutter/material.dart';
 import 'view/technician_profile/technician_profile_screen.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF0066FF)),
         useMaterial3: true,
       ),
-      home: const TechnicianProfileScreen(),
+      home: const PriceEstimateScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
