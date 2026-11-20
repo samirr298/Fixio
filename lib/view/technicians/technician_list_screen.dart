@@ -89,9 +89,50 @@ class TechnicianListScreen extends StatelessWidget {
             const SizedBox(width: 8),
             _buildFilterChip("Location: Nearby (< 5 km)"),
             const SizedBox(width: 8),
-            _buildFilterChip("Price"),
+            _buildFilterChipWithDot("Available Now"),
+            const SizedBox(width: 8),
+            _buildFilterChip("Price: Any"),
+            const SizedBox(width: 8),
+            _buildFilterChip("Experience: 5+ years"),
+            const SizedBox(width: 8),
+            _buildFilterChip("Rating: 4.5+"),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildFilterChipWithDot(String label) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: Colors.grey.shade100,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: Colors.grey.shade300,
+        ),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            width: 8,
+            height: 8,
+            decoration: const BoxDecoration(
+              color: Colors.green,
+              shape: BoxShape.circle,
+            ),
+          ),
+          const SizedBox(width: 6),
+          Text(
+            label,
+            style: const TextStyle(
+              color: Colors.black87,
+              fontSize: 13,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ],
       ),
     );
   }
