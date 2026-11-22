@@ -1,3 +1,5 @@
+import 'package:fixio/view/categories/service_categories.dart';
+import 'package:fixio/view/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'view/welcome_screen.dart';
 
