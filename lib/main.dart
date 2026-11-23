@@ -1,6 +1,8 @@
+import 'package:fixio/view/price_estimate/price_estimate_screen.dart';
+import 'package:flutter/material.dart';
+import 'view/technician_profile/technician_profile_screen.dart';
 import 'package:fixio/view/categories/service_categories.dart';
 import 'package:fixio/view/profile/profile_screen.dart';
-import 'package:flutter/material.dart';
 import 'view/technicians/technician_list_screen.dart'; // Add this import
 import 'view/welcome_screen.dart';
 
@@ -21,8 +23,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: const WelcomeScreen(),
-      debugShowCheckedModeBanner: false,
+      home: const PriceEstimateScreen(),
     );
   }
 }
