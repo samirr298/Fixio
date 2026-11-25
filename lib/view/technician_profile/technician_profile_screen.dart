@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../favourites/favourite_technicians_screen.dart';
+import '../price_estimate/price_estimate_screen.dart';
 
 class TechnicianProfileScreen extends StatefulWidget {
   const TechnicianProfileScreen({super.key});
@@ -45,6 +47,32 @@ class _TechnicianProfileScreenState extends State<TechnicianProfileScreen> {
               setState(() {
                 isFavorite = !isFavorite;
               });
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    isFavorite
+                        ? 'Navam Shrestha saved to your favourites!'
+                        : 'Removed from favourites.',
+                  ),
+                  backgroundColor:
+                      isFavorite ? const Color(0xFF16A34A) : Colors.black87,
+                  action: isFavorite
+                      ? SnackBarAction(
+                          label: 'View All',
+                          textColor: Colors.yellow,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const FavouriteTechniciansScreen(),
+                              ),
+                            );
+                          },
+                        )
+                      : null,
+                ),
+              );
             },
           ),
         ],
@@ -469,7 +497,14 @@ class _TechnicianProfileScreenState extends State<TechnicianProfileScreen> {
                 ],
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const PriceEstimateScreen(),
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF0066FF),
                   foregroundColor: Colors.white,
