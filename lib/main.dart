@@ -1,3 +1,4 @@
+import 'package:fixio/view/booking/booking_screen.dart';
 import 'package:flutter/material.dart';
 import 'view/booking/schedule_estimate_screen.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: const ScheduleEstimateScreen(),
+      home: const CreateBookingScreen(),
     );
   }
 }
