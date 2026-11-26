@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:fixio/view/booking/reschedule_cancel_booking_screen.dart';
+import 'package:fixio/view/booking/booking_history_screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {b  
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {b
         useMaterial3: true,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: const RescheduleCancelBookingScreen(),
+      home: const BookingHistoryScreen(),
     );
   }
 }
