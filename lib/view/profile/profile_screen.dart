@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../favourites/favourite_technicians_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -89,6 +90,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
               sectionTitle('ACCOUNT & LOCATIONS'),
 
               sectionCard([
+                settingsTile(
+                  icon: Icons.favorite_border_rounded,
+                  title: 'Saved Favourite Technicians',
+                  subtitle: 'Find & re-book trusted service providers',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const FavouriteTechniciansScreen(),
+                      ),
+                    );
+                  },
+                ),
+
                 settingsTile(
                   icon: Icons.location_on_outlined,
                   title: 'Saved Addresses',

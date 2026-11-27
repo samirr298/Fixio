@@ -437,7 +437,7 @@ class _PriceEstimateScreenState extends State<PriceEstimateScreen> {
                   ),
                   Switch.adaptive(
                     value: includeMaterials,
-                    activeColor: const Color(0xFF0066FF),
+                    activeTrackColor: const Color(0xFF0066FF),
                     onChanged: (val) {
                       setState(() {
                         includeMaterials = val;
